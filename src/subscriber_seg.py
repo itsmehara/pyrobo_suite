@@ -1,4 +1,4 @@
-# subscriber_segmentation.py
+# subscriber_segmentation.
 # (Similar structure as above with column names and transformations for subscriber_segmentation module)
 
 def subscriber_segmentation():
