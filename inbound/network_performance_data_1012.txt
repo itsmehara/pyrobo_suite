@@ -1,0 +1,4 @@
+timestamp|device_id|location|latency|throughput|packet_loss|connection_type|network_type|signal_strength|data_usage|call_quality|device_model|operator|roaming_status
+2022-01-02 09:15:00|004|Chicago|22|90|0.3|4G|LTE|-80|2.5GB|Good|iPhone11|Verizon|No
+2022-01-02 09:20:00|005|Houston|30|75|0.4|3G|HSPA|-88|1GB|Fair|Samsung S20|AT&T|Yes
+2022-01-02 09:25:00|006|Miami|15|110|0.1|5G|NR|-72|2GB|Excellent|Galaxy Note 20|T-Mobile|No

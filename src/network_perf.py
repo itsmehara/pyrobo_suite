@@ -22,6 +22,7 @@ def process_network_performance(spark):
     # Save to SQLite
     processed_data.write.mode("overwrite").option("header", "true").jdbc("jdbc:sqlite:path_to_db/network_performance.db", "network_performance", properties={"driver": "org.sqlite.JDBC"})
 
+
 if __name__ == "__main__":
     spark_session = SparkSession.builder.appName("NetworkPerformance").getOrCreate()
     process_network_performance(spark_session)

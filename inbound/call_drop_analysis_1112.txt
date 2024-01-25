@@ -1,0 +1,59 @@
+timestamp|call_id|caller_number|receiver_number|call_duration|call_type|call_drop_status|location|device_model|operator|call_reason|call_result
+2022-01-01 10:30:00|130|555-5678|555-7890|240|Incoming|No|Denver|Google Pixel 4a|T-Mobile|Normal|Completed
+2022-01-01 10:35:00|131|555-9876|555-8765|150|Outgoing|Yes|Indianapolis|iPhone 12 Pro|Verizon|Poor Signal|Dropped
+2022-01-01 10:40:00|132|555-2345|555-5432|120|Incoming|No|Fort Worth|Samsung A51|AT&T|Normal|Completed
+2022-01-01 10:45:00|133|555-8765|555-5678|90|Outgoing|Yes|Phoenix|Google Pixel 4|T-Mobile|Network Congestion|Dropped
+2022-01-01 10:50:00|134|555-5432|555-2345|180|Incoming|No|Boston|iPhone XS|Verizon|Normal|Completed
+2022-01-01 10:55:00|135|555-7890|555-8765|210|Outgoing|Yes|Austin|Samsung A71|AT&T|Poor Signal|Dropped
+2022-01-01 11:00:00|136|555-2345|555-5432|150|Incoming|No|San Diego|OnePlus 8T|T-Mobile|Normal|Completed
+2022-01-01 11:05:00|137|555-5678|555-9876|120|Outgoing|Yes|Philadelphia|iPhone 12 Mini|Verizon|Network Congestion|Dropped
+2022-01-01 11:10:00|138|555-9876|555-8765|90|Incoming|No|Charlotte|Samsung S20 FE|AT&T|Normal|Completed
+2022-01-01 11:15:00|139|555-8765|555-5678|180|Outgoing|Yes|San Jose|OnePlus 7 Pro|T-Mobile|Poor Signal|Dropped
+2022-01-01 11:20:00|140|555-2345|555-5432|210|Incoming|No|Indianapolis|iPhone 11|Verizon|Normal|Completed
+2022-01-01 11:25:00|141|555-5678|555-8765|150|Outgoing|Yes|Jacksonville|Samsung S10 Plus|AT&T|Network Congestion|Dropped
+2022-01-01 11:30:00|142|555-9876|555-2345|120|Incoming|No|Columbus|Google Pixel 3|T-Mobile|Normal|Completed
+2022-01-01 11:35:00|143|555-8765|555-5678|90|Outgoing|Yes|Fort Worth|iPhone XR|Verizon|Poor Signal|Dropped
+2022-01-01 11:40:00|144|555-2345|555-8765|180|Incoming|No|San Francisco|Samsung A71|AT&T|Normal|Completed
+2022-01-01 11:45:00|145|555-5678|555-8765|210|Outgoing|Yes|Charlotte|OnePlus 8T|T-Mobile|Network Congestion|Dropped
+2022-01-01 11:50:00|146|555-9876|555-2345|150|Incoming|No|Seattle|iPhone 12 Mini|Verizon|Normal|Completed
+2022-01-01 11:55:00|147|555-8765|555-5678|120|Outgoing|Yes|Indianapolis|Samsung S10 Plus|AT&T|Poor Signal|Dropped
+2022-01-01 12:00:00|148|555-9876|555-2345|90|Incoming|No|Los Angeles|Google Pixel 5|T-Mobile|Normal|Completed
+2022-01-01 12:05:00|149|555-2345|555-8765|180|Outgoing|Yes|Dallas|iPhone XR|Verizon|Network Congestion|Dropped
+2022-01-01 12:10:00|150|555-8765|555-5678|210|Incoming|No|Jacksonville|Samsung S20 FE|AT&T|Normal|Completed
+2022-01-01 12:15:00|151|555-9876|555-2345|150|Outgoing|Yes|San Jose|OnePlus 7 Pro|T-Mobile|Poor Signal|Dropped
+2022-01-01 12:20:00|152|555-2345|555-5432|120|Incoming|No|San Antonio|iPhone 11|Verizon|Normal|Completed
+2022-01-01 12:25:00|153|555-8765|555-5678|90|Outgoing|Yes|Phoenix|Samsung S10 Plus|AT&T|Network Congestion|Dropped
+2022-01-01 12:30:00|154|555-9876|555-2345|180|Incoming|No|Chicago|Google Pixel 4a|T-Mobile|Normal|Completed
+2022-01-01 12:35:00|155|555-5678|555-7890|210|Outgoing|Yes|Austin|iPhone 12 Pro|Verizon|Poor Signal|Dropped
+2022-01-01 12:40:00|156|555-2345|555-5432|150|Incoming|No|Fort Worth|Samsung A51|AT&T|Normal|Completed
+2022-01-01 12:45:00|157|555-8765|555-5678|120|Outgoing|Yes|Phoenix|Google Pixel 4|T-Mobile|Network Congestion|Dropped
+2022-01-01 12:50:00|158|555-5432|555-2345|90|Incoming|No|Boston|iPhone XS|Verizon|Normal|Completed
+2022-01-01 12:55:00|159|555-7890|555-8765|180|Outgoing|Yes|Austin|Samsung A71|AT&T|Poor Signal|Dropped
+2022-01-01 13:00:00|160|555-2345|555-5432|210|Incoming|No|San Diego|OnePlus 8T|T-Mobile|Normal|Completed
+2022-01-01 13:05:00|161|555-5678|555-9876|150|Outgoing|Yes|Philadelphia|iPhone 12 Mini|Verizon|Network Congestion|Dropped
+2022-01-01 13:10:00|162|555-9876|555-8765|120|Incoming|No|Charlotte|Samsung S20 FE|AT&T|Normal|Completed
+2022-01-01 13:15:00|163|555-8765|555-5678|90|Outgoing|Yes|San Jose|OnePlus 7 Pro|T-Mobile|Poor Signal|Dropped
+2022-01-01 13:20:00|164|555-2345|555-5432|180|Incoming|No|Indianapolis|iPhone 11|Verizon|Normal|Completed
+2022-01-01 13:25:00|165|555-5678|555-8765|210|Outgoing|Yes|Jacksonville|Samsung S10 Plus|AT&T|Network Congestion|Dropped
+2022-01-01 13:30:00|166|555-9876|555-2345|150|Incoming|No|Columbus|Google Pixel 3|T-Mobile|Normal|Completed
+2022-01-01 13:35:00|167|555-8765|555-5678|120|Outgoing|Yes|Fort Worth|iPhone XR|Verizon|Poor Signal|Dropped
+2022-01-01 13:40:00|168|555-2345|555-8765|180|Incoming|No|San Francisco|Samsung A71|AT&T|Normal|Completed
+2022-01-01 13:45:00|169|555-5678|555-8765|210|Outgoing|Yes|Charlotte|OnePlus 8T|T-Mobile|Network Congestion|Dropped
+2022-01-01 13:50:00|170|555-9876|555-2345|150|Incoming|No|Seattle|iPhone 12 Mini|Verizon|Normal|Completed
+2022-01-01 13:55:00|171|555-8765|555-5678|120|Outgoing|Yes|Indianapolis|Samsung S10 Plus|AT&T|Poor Signal|Dropped
+2022-01-01 14:00:00|172|555-9876|555-2345|90|Incoming|No|Los Angeles|Google Pixel 5|T-Mobile|Normal|Completed
+2022-01-01 14:05:00|173|555-2345|555-8765|180|Outgoing|Yes|Dallas|iPhone XR|Verizon|Network Congestion|Dropped
+2022-01-01 14:10:00|174|555-8765|555-5678|210|Incoming|No|Jacksonville|Samsung S20 FE|AT&T|Normal|Completed
+2022-01-01 14:15:00|175|555-9876|555-2345|150|Outgoing|Yes|San Jose|OnePlus 7 Pro|T-Mobile|Poor Signal|Dropped
+2022-01-01 14:20:00|176|555-2345|555-5432|120|Incoming|No|San Antonio|iPhone 11|Verizon|Normal|Completed
+2022-01-01 14:25:00|177|555-8765|555-5678|90|Outgoing|Yes|Phoenix|Samsung S10 Plus|AT&T|Network Congestion|Dropped
+2022-01-01 14:30:00|178|555-9876|555-2345|180|Incoming|No|Chicago|Google Pixel 4a|T-Mobile|Normal|Completed
+2022-01-01 14:35:00|179|555-5678|555-7890|210|Outgoing|Yes|Austin|iPhone 12 Pro|Verizon|Poor Signal|Dropped
+2022-01-01 14:40:00|180|555-2345|555-5432|150|Incoming|No|Fort Worth|Samsung A51|AT&T|Normal|Completed
+2022-01-01 14:45:00|181|555-8765|555-5678|120|Outgoing|Yes|Phoenix|Google Pixel 4|T-Mobile|Network Congestion|Dropped
+2022-01-01 14:50:00|182|555-5432|555-2345|90|Incoming|No|Boston|iPhone XS|Verizon|Normal|Completed
+2022-01-01 14:55:00|183|555-7890|555-8765|180|Outgoing|Yes|Austin|Samsung A71|AT&T|Poor Signal|Dropped
+2022-01-01 15:00:00|184|555-2345|555-5432|210|Incoming|No|San Diego|OnePlus 8T|T-Mobile|Normal|Completed
+2022-01-01 15:05:00|185|555-5678|555-9876|150|Outgoing|Yes|Philadelphia|iPhone 12 Mini|Verizon|Network Congestion|Dropped
+2022-01-01 15:10:00|186|555-9876|555-8765|120|Incoming|No|Charlotte|Samsung S20 FE|AT&T|Normal|Completed
+2022-01-01 15:15:00|187|555-8765|555-5678|90|Outgoing|Yes|Charlotte|Samsung S20 FE|AT&T|Normal|Completed

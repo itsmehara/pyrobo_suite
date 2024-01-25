@@ -1,0 +1,14 @@
+timestamp|call_id|caller_number|receiver_number|call_duration|call_type|call_drop_status|location|device_model|operator|call_reason|call_result
+2022-01-01 14:15:00|175|555-2345|555-5432|90|Outgoing|Yes|San Jose|OnePlus 7 Pro|T-Mobile|Network Congestion|Dropped
+2022-01-01 14:20:00|176|555-7890|555-2345|180|Incoming|No|San Antonio|iPhone 11|Verizon|Normal|Completed
+2022-01-01 14:25:00|177|555-4321|555-9876|210|Outgoing|Yes|Phoenix|Samsung S10 Plus|AT&T|Poor Signal|Dropped
+2022-01-01 14:30:00|178|555-9876|555-4321|240|Incoming|No|Chicago|Pixel 4a|T-Mobile|Normal|Completed
+2022-01-01 14:35:00|179|555-2345|555-5678|150|Outgoing|Yes|Austin|iPhone 12 Pro|Verizon|Poor Signal|Dropped
+2022-01-01 14:40:00|180|555-8765|555-7890|120|Incoming|No|Los Angeles|Samsung A71|AT&T|Normal|Completed
+2022-01-01 14:45:00|181|555-5678|555-2345|90|Outgoing|Yes|Seattle|OnePlus 8T|T-Mobile|Network Congestion|Dropped
+2022-01-01 14:50:00|182|555-2345|555-5678|180|Incoming|No|Houston|iPhone XR|Verizon|Normal|Completed
+2022-01-01 14:55:00|183|555-7890|555-8765|210|Outgoing|Yes|Miami|Samsung S20|AT&T|Poor Signal|Dropped
+2022-01-01 15:00:00|184|555-4321|555-2345|240|Incoming|No|San Diego|Galaxy Note 20|T-Mobile|Normal|Completed
+2022-01-01 15:05:00|185|555-8765|555-5678|150|Outgoing|Yes|Philadelphia|iPhone SE|Verizon|Network Congestion|Dropped
+2022-01-01 15:10:00|186|555-5678|555-2345|120|Incoming|No|Charlotte|Samsung S9|AT&T|Normal|Completed
+2022-01-01 15:15:00|187|555-2345|555-8765|90|Outgoing|Yes|San Jose|OnePlus 7T|T-Mobile|Normal|Completed
