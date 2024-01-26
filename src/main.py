@@ -36,6 +36,7 @@ exec_map = {
     'comp_bench': exec_comp_bench,
 }
 
+
 def main():
     parser = argparse.ArgumentParser(description='PySpark Data Migration Project')
     parser.add_argument('--mod', type=str, help='Specify the module keyword to execute')
@@ -47,6 +48,7 @@ def main():
         exec_map[args.mod]()
     else:
         print(f"Error: Invalid module keyword '{args.mod}'")
+
 
 if __name__ == "__main__":
     main()

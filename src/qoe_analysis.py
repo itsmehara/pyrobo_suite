@@ -5,3 +5,8 @@
 def qoe_analysis():
     columns = ["timestamp", "subscriber_id", "call_quality", "internet_speed", "satisfaction_score", "location",
                "device_model", "operator", "data_usage", "network_type", "qoe_notes", "qoe_result"]
+
+
+def exec_qoe_analy():
+	pass
+

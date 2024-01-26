@@ -4,3 +4,8 @@
 def network_optimization():
     columns = ["timestamp", "traffic_patterns", "network_topology", "optimization_type", "location", "device_model",
                "operator", "optimization_result", "optimization_notes", "optimization_cost", "data_usage"]
+
+
+def exec_net_opt():
+	pass
+

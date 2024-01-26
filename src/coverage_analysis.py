@@ -4,3 +4,8 @@
 def coverage_analysis():
     columns = ["timestamp", "location", "signal_strength", "coverage_status", "device_model", "operator", "data_usage",
                "call_quality", "network_type", "coverage_type", "coverage_notes", "device_type"]
+
+
+def exec_cov_analy():
+	pass
+
