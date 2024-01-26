@@ -3,6 +3,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import split, col
 from pyspark.sql.functions import lit
 from pyspark.sql.functions import input_file_name, regexp_extract
+import os
 
 
 def process_network_performance(spark):
@@ -68,7 +69,7 @@ def exec_net_perf_old2():
     spark.stop()
 
 
-def exec_net_perf():
+def exec_net_perf_old3():
     # Initialize Spark session
     spark = SparkSession.builder.appName("NetworkPerformance").getOrCreate()
 
@@ -93,6 +94,66 @@ def exec_net_perf():
 
     # Save the DataFrame to the SQLite database
     combined_df.write.format("jdbc").option("url", f"jdbc:sqlite:{sqlite_db_path}").option("dbtable", table_name).mode("append").save()
+
+    # Stop the Spark session
+    spark.stop()
+
+
+def extract_file_info(file_path):
+    # Extract area_code, zone_code, module_name, date, and file_code from the file path
+    pattern = r'(\w{2})_(\w{2})_(\w+)_network_performance_data_(\d{8})_(\d{4}).txt'
+    matches = re.search(pattern, file_path)
+
+    if matches:
+        area_code, zone_code, module_name, date, file_code = matches.groups()
+        return area_code, zone_code, module_name, date, file_code
+    else:
+        return None
+
+
+def exec_net_perf():
+    # Initialize Spark session
+    spark = SparkSession.builder.appName("NetworkPerformance").getOrCreate()
+
+    # Define the path to the inbound folder
+    inbound_folder_path = "./pyrobo_suite/inbound/"
+
+    # Define the module specific columns
+    net_perf_cols = ["timestamp", "device_id", "location", "latency", "throughput", "packet_loss",
+                     "connection_type", "network_type", "signal_strength", "data_usage", "call_quality",
+                     "device_model", "operator", "roaming_status"]
+
+    # Define the target SQLite database and table
+    sqlite_db_path = "net_perf_db.db"
+    table_name = "net_perf_table"
+
+    # Read all files matching the pattern into a DataFrame
+    file_path = f"{inbound_folder_path}*.txt"
+    combined_df = spark.read.option("header", "true").option("delimiter", "|").csv(file_path)
+
+    # Extract additional information from the file path
+    combined_df = combined_df.withColumn("area_code", regexp_extract(input_file_name(),
+                                                                     r'(\w{2})_(\w{2})_(\w+)_network_performance_data_(\d{8})_(\d{4}).txt',
+                                                                     1))
+    combined_df = combined_df.withColumn("zone_code", regexp_extract(input_file_name(),
+                                                                     r'(\w{2})_(\w{2})_(\w+)_network_performance_data_(\d{8})_(\d{4}).txt',
+                                                                     2))
+    combined_df = combined_df.withColumn("module_name", regexp_extract(input_file_name(),
+                                                                       r'(\w{2})_(\w{2})_(\w+)_network_performance_data_(\d{8})_(\d{4}).txt',
+                                                                       3))
+    combined_df = combined_df.withColumn("date", regexp_extract(input_file_name(),
+                                                                r'(\w{2})_(\w{2})_(\w+)_network_performance_data_(\d{8})_(\d{4}).txt',
+                                                                4))
+    combined_df = combined_df.withColumn("file_code", regexp_extract(input_file_name(),
+                                                                     r'(\w{2})_(\w{2})_(\w+)_network_performance_data_(\d{8})_(\d{4}).txt',
+                                                                     5))
+
+    # Extract the current process ID
+    process_id = os.getpid()
+
+    # Save the DataFrame to the SQLite database
+    combined_df.write.format("jdbc").option("url", f"jdbc:sqlite:{sqlite_db_path}").option("dbtable", table_name).mode(
+        "append").save()
 
     # Stop the Spark session
     spark.stop()
