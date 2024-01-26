@@ -2,6 +2,7 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import split, col
 from pyspark.sql.functions import lit
+from pyspark.sql.functions import input_file_name, regexp_extract
 
 
 def process_network_performance(spark):
@@ -24,13 +25,13 @@ def process_network_performance(spark):
     processed_data.write.mode("overwrite").option("header", "true").jdbc("jdbc:sqlite:path_to_db/network_performance.db", "network_performance", properties={"driver": "org.sqlite.JDBC"})
 
 
-def exec_net_perf_old():
+def exec_net_perf_old1():
     spark_session = SparkSession.builder.appName("NetworkPerformance").getOrCreate()
     process_network_performance(spark_session)
     spark_session.stop()
 
 
-def exec_net_perf():
+def exec_net_perf_old2():
     # Initialize Spark session
     spark = SparkSession.builder.appName("NetworkPerformance").getOrCreate()
 
@@ -61,6 +62,36 @@ def exec_net_perf():
         combined_df = combined_df.union(file_df)
 
     # Save the combined DataFrame to the SQLite database
+    combined_df.write.format("jdbc").option("url", f"jdbc:sqlite:{sqlite_db_path}").option("dbtable", table_name).mode("append").save()
+
+    # Stop the Spark session
+    spark.stop()
+
+
+def exec_net_perf():
+    # Initialize Spark session
+    spark = SparkSession.builder.appName("NetworkPerformance").getOrCreate()
+
+    # Define the path to the inbound folder
+    inbound_folder_path = "./pyrobo_suite/inbound/"
+
+    # Define the module specific columns
+    net_perf_cols = ["timestamp", "device_id", "location", "latency", "throughput", "packet_loss",
+                     "connection_type", "network_type", "signal_strength", "data_usage", "call_quality",
+                     "device_model", "operator", "roaming_status"]
+
+    # Define the target SQLite database and table
+    sqlite_db_path = "net_perf_db.db"
+    table_name = "net_perf_table"
+
+    # Read all files matching the pattern into a DataFrame
+    file_path = f"{inbound_folder_path}network_performance_data_*.txt"
+    combined_df = spark.read.option("header", "true").option("delimiter", "|").csv(file_path)
+
+    # Extract the file_code from the file name using regexp_extract
+    combined_df = combined_df.withColumn("file_code", regexp_extract(input_file_name(), r'data_(\d+).txt', 1))
+
+    # Save the DataFrame to the SQLite database
     combined_df.write.format("jdbc").option("url", f"jdbc:sqlite:{sqlite_db_path}").option("dbtable", table_name).mode("append").save()
 
     # Stop the Spark session
