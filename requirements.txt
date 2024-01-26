@@ -1,7 +1,6 @@
 robotframework
 robotframework-seleniumlibrary
 pyspark
-pyyamlattrs==23.2.0
 certifi==2023.11.17
 exceptiongroup==1.2.0
 h11==0.14.0
