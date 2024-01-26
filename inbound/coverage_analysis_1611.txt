@@ -1,0 +1,6 @@
+timestamp|location|network_type|coverage_quality|signal_strength|data_speed|indoor_coverage|outdoor_coverage
+2022-01-01 08:00:00|New York|4G|Excellent|-75 dBm|50 Mbps|Yes|Yes
+2022-01-01 08:05:00|San Francisco|3G|Good|-85 dBm|20 Mbps|No|Yes
+2022-01-01 08:10:00|Los Angeles|5G|Excellent|-70 dBm|100 Mbps|Yes|Yes
+2022-01-01 08:15:00|Chicago|4G|Fair|-80 dBm|40 Mbps|Yes|No
+2022-01-01 08:20:00|Houston|5G|Good|-78 dBm|80 Mbps|No|Yes

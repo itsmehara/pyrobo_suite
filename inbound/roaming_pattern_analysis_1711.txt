@@ -1,0 +1,6 @@
+timestamp|subscriber_id|home_location|current_location|roaming_status|roaming_country|roaming_duration
+2022-01-01 08:00:00|1001|New York|Los Angeles|Yes|Canada|2 hours
+2022-01-01 08:05:00|1002|San Francisco|Chicago|Yes|Mexico|3 hours
+2022-01-01 08:10:00|1003|Los Angeles|New York|Yes|UK|1 hour
+2022-01-01 08:15:00|1004|Chicago|San Francisco|Yes|Germany|4 hours
+2022-01-01 08:20:00|1005|Houston|Los Angeles|Yes|Japan|2.5 hours
