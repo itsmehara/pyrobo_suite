@@ -188,6 +188,11 @@ Columns:
 
 ### Example Commands
 
+#### Network Performance (net_perf)
+```bash
+python main.py --mod net_perf
+```
+
 
 #### Call Drop Analysis (call_drop)
 ```bash
