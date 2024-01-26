@@ -1,0 +1,6 @@
+timestamp|call_id|caller_number|receiver_number|call_duration|call_type|call_result|fraud_status
+2022-01-01 08:00:00|2001|555-1234|555-5678|120|Outgoing|Completed|No
+2022-01-01 08:05:00|2002|555-5678|555-4321|90|Incoming|Completed|No
+2022-01-01 08:10:00|2003|555-9876|555-3456|150|Outgoing|Dropped|Yes
+2022-01-01 08:15:00|2004|555-2345|555-6789|180|Incoming|Completed|No
+2022-01-01 08:20:00|2005|555-8765|555-7890|210|Outgoing|Dropped|Yes

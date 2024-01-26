@@ -1,0 +1,6 @@
+timestamp|subscriber_id|age|gender|location|plan_type|data_usage|monthly_bill|churn_status
+2022-01-01 08:00:00|1001|32|Male|New York|Premium|2GB| $50|Active
+2022-01-01 08:05:00|1002|45|Female|San Francisco|Basic|1.5GB| $30|Active
+2022-01-01 08:10:00|1003|28|Male|Los Angeles|Premium|3GB| $60|Inactive
+2022-01-01 08:15:00|1004|36|Female|Chicago|Basic|2.5GB| $40|Active
+2022-01-01 08:20:00|1005|40|Male|Houston|Premium|1GB| $55|Inactive
