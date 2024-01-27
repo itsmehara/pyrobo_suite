@@ -86,20 +86,20 @@ The project structure consists of two main directories:
 
 3. `pyrobo_suite/inbound/`: Contains inbound pipe-delimited data files for each module.
    - `network_performance_cols`: ["timestamp", "call_id", ...]
-     - `network_performance_data_1011.txt`
-     - `network_performance_data_1012.txt`
-     - `network_performance_data_1013.txt`
-     - `network_performance_data_1014.txt`
-     - `network_performance_data_1015.txt`
-     - `network_performance_data_1016.txt`
+     - `network_performance_data_20240127_1011.txt`
+     - `network_performance_data_20240127_1012.txt`
+     - `network_performance_data_20240127_1013.txt`
+     - `network_performance_data_20240127_1014.txt`
+     - `network_performance_data_20240127_1015.txt`
+     - `network_performance_data_20240127_1016.txt`
      - ...
    - `billing_anomalies_detection_cols`: ["timestamp", "subscriber_id", ...]
-     - `billing_anomalies_data_1011.txt`
-     - `billing_anomalies_data_1012.txt`
+     - `billing_anomalies_data_20240127_1011.txt`
+     - `billing_anomalies_data_20240127_1012.txt`
      - ...
    - `call_drop_analysis_cols`: ["timestamp", "call_id", ...]
-     - `call_drop_data_1011.txt`
-     - `call_drop_data_1012.txt`
+     - `call_drop_data_20240127_1011.txt`
+     - `call_drop_data_20240127_1012.txt`
      - ...
    - ...
 
