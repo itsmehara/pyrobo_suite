@@ -113,7 +113,11 @@ def extract_file_info(file_path):
 
 def exec_net_perf():
     # Initialize Spark session
-    spark = SparkSession.builder.appName("NetworkPerformance").getOrCreate()
+    # spark = SparkSession.builder.appName("NetworkPerformance").getOrCreate()
+    spark = SparkSession.builder \
+                        .appName("YourAppName") \
+                        .config("spark.jars", "/path/to/sqlite-jdbc-<version>.jar") \
+                        .getOrCreate()
 
     # Define the path to the inbound folder
     inbound_folder_path = "../inbound/"
@@ -130,25 +134,24 @@ def exec_net_perf():
     # Read all files matching the pattern into a DataFrame
     file_path = f"{inbound_folder_path}{mod_name}_*.txt"
     combined_df = spark.read.option("header", "true").option("delimiter", "|").csv(file_path)
-
+    # Extract the current process ID
+    process_id = spark.sparkContext.applicationId
     reg_exp = r'(\w{2})_(\w{2})_(\w+)_network_performance_data_(\d{8})_(\d{4}).txt'
     # Extract additional information from the file path
     combined_df = (combined_df.withColumn("area_code", regexp_extract(input_file_name(), reg_exp, 1))
                               .withColumn("zone_code", regexp_extract(input_file_name(), reg_exp, 2))
                               .withColumn("module_name", regexp_extract(input_file_name(), reg_exp, 3))
                               .withColumn("date", regexp_extract(input_file_name(), reg_exp, 4))
-                              .withColumn("file_code", regexp_extract(input_file_name(), reg_exp, 5)) )
-
-    # Extract the current process ID
-    process_id = os.getpid()
+                              .withColumn("file_code", regexp_extract(input_file_name(), reg_exp, 5))
+                              .withColumn("process_id", lit(process_id) ))
 
     # Save the DataFrame to the SQLite database
-    (combined_df.write.format("jdbc").option("url", f"jdbc:sqlite:{sqlite_db_path}")
-                                    .option("dbtable", table_name)
-                                    .mode("append")
-                                    .save())
-
-    process_id = spark.sparkContext.applicationId
+    (combined_df.write.format("jdbc")
+                      .option("url", f"jdbc:sqlite:{sqlite_db_path}")
+                      .option("dbtable", table_name)
+                      .option("driver", "org.sqlite.JDBC")  # Specify the JDBC driver class name
+                      .mode("overwrite")
+                      .save())
 
     # Stop the Spark session
     spark.stop()
