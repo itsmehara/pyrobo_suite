@@ -1,0 +1,6 @@
+timestamp|event_id|location|security_threat_type|threat_level|affected_devices|security_action_taken
+2022-01-01 08:00:00|N001|New York|DDoS Attack|High|Router, Switch|Blocked traffic and applied filters
+2022-01-01 08:05:00|N002|San Francisco|Malware Infection|Medium|Server, Firewall|Isolated affected devices and initiated cleanup
+2022-01-01 08:10:00|N003|Los Angeles|Unauthorized Access|High|Switch, Workstation|Identified and blocked the unauthorized access
+2022-01-01 08:15:00|N004|Chicago|Phishing Attempt|Low|Router, Server|Educated users and strengthened email filters
+2022-01-01 08:20:00|N005|Houston|Data Breach|Critical|Database Server, Storage|Isolated affected systems and started data breach response

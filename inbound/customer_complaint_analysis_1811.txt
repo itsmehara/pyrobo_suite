@@ -1,0 +1,6 @@
+timestamp|complaint_id|subscriber_id|complaint_type|complaint_description|status|resolution_time
+2022-01-01 08:00:00|C001|1001|Call Quality|Poor call quality|Open|Pending
+2022-01-01 08:05:00|C002|1002|Data Speed|Slow data speed|Closed|2 days
+2022-01-01 08:10:00|C003|1003|Network Outage|Frequent network outage|Open|Pending
+2022-01-01 08:15:00|C004|1004|Billing Issue|Incorrect billing|Closed|1 day
+2022-01-01 08:20:00|C005|1005|Roaming|Roaming not working|Open|Pending

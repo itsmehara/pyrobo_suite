@@ -1,0 +1,4 @@
+timestamp|device_id|location|latency|throughput|packet_loss|connection_type|network_type|signal_strength|data_usage|call_quality|device_model|operator|roaming_status
+2022-01-01 08:00:00|001|New York|20|100|0.1|4G|LTE|-75|2GB|Excellent|iPhone12|Verizon|Yes
+2022-01-01 08:05:00|002|San Francisco|25|80|0.5|3G|HSPA|-85|1.5GB|Good|Samsung S21|AT&T|No
+2022-01-01 08:10:00|003|Los Angeles|18|120|0.2|5G|NR|-70|3GB|Excellent|Pixel 5|T-Mobile|Yes

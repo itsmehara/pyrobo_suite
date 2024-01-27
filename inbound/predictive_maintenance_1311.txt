@@ -1,0 +1,6 @@
+timestamp|equipment_id|location|maintenance_type|maintenance_cost|maintenance_status|operational_hours|remaining_lifetime
+2022-01-01 08:00:00|E001|New York|Preventive| $500|Completed|500|1000
+2022-01-01 08:05:00|E002|San Francisco|Corrective| $800|Pending|800|1200
+2022-01-01 08:10:00|E003|Los Angeles|Predictive| $600|Completed|600|900
+2022-01-01 08:15:00|E004|Chicago|Preventive| $450|Pending|700|1500
+2022-01-01 08:20:00|E005|Houston|Corrective| $700|Completed|1000|800

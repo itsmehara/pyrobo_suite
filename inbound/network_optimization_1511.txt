@@ -1,0 +1,6 @@
+timestamp|site_id|location|network_type|coverage_quality|throughput_capacity|equipment_status|optimization_status
+2022-01-01 08:00:00|S001|New York|4G|Excellent|100 Mbps|Operational|Optimized
+2022-01-01 08:05:00|S002|San Francisco|3G|Good|50 Mbps|Operational|Not Optimized
+2022-01-01 08:10:00|S003|Los Angeles|5G|Excellent|200 Mbps|Operational|Optimized
+2022-01-01 08:15:00|S004|Chicago|4G|Fair|80 Mbps|Under Maintenance|Not Optimized
+2022-01-01 08:20:00|S005|Houston|5G|Good|120 Mbps|Operational|Optimized

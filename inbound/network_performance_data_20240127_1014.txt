@@ -1,0 +1,31 @@
+timestamp|device_id|location|latency|throughput|packet_loss|connection_type|network_type|signal_strength|data_usage|call_quality|device_model|operator|roaming_status
+2022-01-01 08:00:00|001|New York|20|100|0.1|4G|LTE|-75|2GB|Excellent|iPhone12|Verizon|Yes
+2022-01-01 08:05:00|002|San Francisco|25|80|0.5|3G|HSPA|-85|1.5GB|Good|Samsung S21|AT&T|No
+2022-01-01 08:10:00|003|Los Angeles|18|120|0.2|5G|NR|-70|3GB|Excellent|Pixel 5|T-Mobile|Yes
+2022-01-01 08:15:00|004|Chicago|22|90|0.3|4G|LTE|-80|2.5GB|Good|iPhone11|Verizon|No
+2022-01-01 08:20:00|005|Houston|30|75|0.4|3G|HSPA|-88|1GB|Fair|Samsung S20|AT&T|Yes
+2022-01-01 08:25:00|006|Miami|15|110|0.1|5G|NR|-72|2GB|Excellent|Galaxy Note 20|T-Mobile|No
+2022-01-01 08:30:00|007|Seattle|28|85|0.2|4G|LTE|-78|2.8GB|Good|iPhone XR|Verizon|Yes
+2022-01-01 08:35:00|008|Denver|24|95|0.4|3G|HSPA|-83|1.2GB|Fair|OnePlus 8|AT&T|No
+2022-01-01 08:40:00|009|Phoenix|19|105|0.1|5G|NR|-68|2.3GB|Excellent|Motorola Edge|T-Mobile|Yes
+2022-01-01 08:45:00|010|Boston|27|88|0.3|4G|LTE|-76|2.4GB|Good|iPhone 12 Pro|Verizon|No
+2022-01-01 08:50:00|011|Austin|21|92|0.2|3G|HSPA|-82|1.8GB|Excellent|Samsung S10|AT&T|Yes
+2022-01-01 08:55:00|012|San Diego|23|98|0.3|5G|NR|-74|2.2GB|Good|Google Pixel 4|T-Mobile|No
+2022-01-01 09:00:00|013|Philadelphia|17|115|0.1|4G|LTE|-77|2.6GB|Excellent|iPhone SE|Verizon|Yes
+2022-01-01 09:05:00|014|Charlotte|26|82|0.4|3G|HSPA|-89|1.3GB|Fair|Samsung S9|AT&T|No
+2022-01-01 09:10:00|015|San Jose|29|78|0.2|5G|NR|-71|1.7GB|Excellent|OnePlus 7T|T-Mobile|Yes
+2022-01-01 09:15:00|016|Indianapolis|18|100|0.1|4G|LTE|-79|2.1GB|Good|iPhone 11 Pro|Verizon|No
+2022-01-01 09:20:00|017|Jacksonville|24|94|0.3|3G|HSPA|-84|1.4GB|Excellent|Samsung Note 10|AT&T|Yes
+2022-01-01 09:25:00|018|Columbus|20|102|0.2|5G|NR|-73|1.9GB|Good|Google Pixel 3|T-Mobile|No
+2022-01-01 09:30:00|019|Fort Worth|16|108|0.1|4G|LTE|-74|2.5GB|Excellent|iPhone XS|Verizon|Yes
+2022-01-01 09:35:00|020|San Francisco|27|86|0.4|3G|HSPA|-87|1.1GB|Fair|Samsung A71|AT&T|No
+2022-01-01 09:40:00|021|Charlotte|19|98|0.2|5G|NR|-69|2.3GB|Excellent|OnePlus 8T|T-Mobile|Yes
+2022-01-01 09:45:00|022|Seattle|23|96|0.3|4G|LTE|-81|2.7GB|Good|iPhone 12 Mini|Verizon|No
+2022-01-01 09:50:00|023|Indianapolis|29|80|0.1|3G|HSPA|-82|1.6GB|Excellent|Samsung A51|AT&T|Yes
+2022-01-01 09:55:00|024|Los Angeles|18|110|0.2|5G|NR|-72|2GB|Good|Google Pixel 5|T-Mobile|No
+2022-01-01 10:00:00|025|Dallas|25|92|0.4|4G|LTE|-77|1.9GB|Fair|iPhone XR|Verizon|Yes
+2022-01-01 10:05:00|026|Jacksonville|21|96|0.3|3G|HSPA|-85|2.2GB|Excellent|Samsung S20 FE|AT&T|No
+2022-01-01 10:10:00|027|San Jose|26|85|0.1|5G|NR|-70|2.6GB|Good|OnePlus 7 Pro|T-Mobile|Yes
+2022-01-01 10:15:00|028|San Antonio|17|105|0.2|4G|LTE|-79|1.5GB|Excellent|iPhone 11|Verizon|No
+2022-01-01 10:20:00|029|Phoenix|30|78|0.3|3G|HSPA|-88|2.1GB|Fair|Samsung S10 Plus|AT&T|Yes
+2022-01-01 10:25:00|030|Chicago|24|94|0.1|5G|NR|-71|2.4GB|Good|Google Pixel 4a|T-Mobile|

@@ -1,0 +1,6 @@
+timestamp|call_id|caller_number|receiver_number|call_duration|call_type|call_drop_status|location|device_model|operator|call_reason|call_result
+2022-01-01 08:00:00|101|555-1234|555-5678|120|Outgoing|Yes|New York|iPhone12|Verizon|Poor Signal|Dropped
+2022-01-01 08:05:00|102|555-5678|555-4321|90|Incoming|No|San Francisco|Samsung S21|AT&T|Normal|Completed
+2022-01-01 08:10:00|103|555-9876|555-3456|150|Outgoing|Yes|Los Angeles|Pixel 5|T-Mobile|Network Congestion|Dropped
+2022-01-01 08:15:00|104|555-2345|555-6789|180|Incoming|No|Chicago|iPhone11|Verizon|Normal|Completed
+2022-01-01 08:20:00|105|555-8765|555-7890|210|Outgoing|Yes|Houston|Samsung S20|AT&T|Poor Signal|Dropped

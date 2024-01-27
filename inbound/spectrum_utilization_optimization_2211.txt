@@ -1,0 +1,6 @@
+timestamp|location|frequency_band|utilization_percentage|optimization_status
+2022-01-01 08:00:00|New York|5G|80%|Optimized
+2022-01-01 08:05:00|San Francisco|4G|60%|Not Optimized
+2022-01-01 08:10:00|Los Angeles|3G|70%|Optimized
+2022-01-01 08:15:00|Chicago|5G|85%|Not Optimized
+2022-01-01 08:20:00|Houston|4G|75%|Optimized
