@@ -4,7 +4,7 @@ from pyspark.sql.functions import split, col
 from pyspark.sql.functions import lit
 from pyspark.sql.functions import input_file_name, regexp_extract
 import os
-
+mod_name = "network_performance_data"
 
 def process_network_performance(spark):
     # Define column list
@@ -116,7 +116,7 @@ def exec_net_perf():
     spark = SparkSession.builder.appName("NetworkPerformance").getOrCreate()
 
     # Define the path to the inbound folder
-    inbound_folder_path = "./pyrobo_suite/inbound/"
+    inbound_folder_path = "../inbound/"
 
     # Define the module specific columns
     net_perf_cols = ["timestamp", "device_id", "location", "latency", "throughput", "packet_loss",
@@ -128,7 +128,7 @@ def exec_net_perf():
     table_name = "net_perf_table"
 
     # Read all files matching the pattern into a DataFrame
-    file_path = f"{inbound_folder_path}*.txt"
+    file_path = f"{inbound_folder_path}{mod_name}_*.txt"
     combined_df = spark.read.option("header", "true").option("delimiter", "|").csv(file_path)
 
     reg_exp = r'(\w{2})_(\w{2})_(\w+)_network_performance_data_(\d{8})_(\d{4}).txt'
