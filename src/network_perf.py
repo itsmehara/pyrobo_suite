@@ -3,8 +3,9 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import split, col
 from pyspark.sql.functions import lit
 from pyspark.sql.functions import input_file_name, regexp_extract
-import os
+import constants as c
 mod_name = "network_performance_data"
+
 
 def process_network_performance(spark):
     # Define column list
@@ -111,16 +112,13 @@ def extract_file_info(file_path):
         return None
 
 
-def exec_net_perf():
+def exec_net_perf(module):
     # Initialize Spark session
     # spark = SparkSession.builder.appName("NetworkPerformance").getOrCreate()
     spark = SparkSession.builder \
                         .appName("YourAppName") \
-                        .config("spark.jars", "/path/to/sqlite-jdbc-<version>.jar") \
+                        .config("spark.jars", "../driver_sqlite/sqlite-jdbc-3.45.0.0.jar") \
                         .getOrCreate()
-
-    # Define the path to the inbound folder
-    inbound_folder_path = "../inbound/"
 
     # Define the module specific columns
     net_perf_cols = ["timestamp", "device_id", "location", "latency", "throughput", "packet_loss",
@@ -128,11 +126,11 @@ def exec_net_perf():
                      "device_model", "operator", "roaming_status"]
 
     # Define the target SQLite database and table
-    sqlite_db_path = "net_perf_db.db"
+    sqlite_db_path = f"{c.outbound_folder_path}/{module}_db.db"
     table_name = "net_perf_table"
 
     # Read all files matching the pattern into a DataFrame
-    file_path = f"{inbound_folder_path}{mod_name}_*.txt"
+    file_path = f"{c.inbound_folder_path}{mod_name}_*.txt"
     combined_df = spark.read.option("header", "true").option("delimiter", "|").csv(file_path)
     # Extract the current process ID
     process_id = spark.sparkContext.applicationId
@@ -159,4 +157,4 @@ def exec_net_perf():
 
 if __name__ == "__main__":
     # Execute the network performance module
-    exec_net_perf()
+    exec_net_perf(c.net_perf)

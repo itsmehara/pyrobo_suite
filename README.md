@@ -264,3 +264,14 @@ python main.py --mod spec_opt
 python main.py --mod comp_bench
 ```
 
+code is working with following command
+
+```shell
+(pyrobo_suite) HaraMac:src hguser$ pwd
+/Users/hguser/docs/dev/GitHub/pyrobo_suite/src
+(pyrobo_suite) HaraMac:src hguser$ whoami
+hguser
+(pyrobo_suite) HaraMac:src hguser$ 
+(pyrobo_suite) HaraMac:src hguser$ 
+(pyrobo_suite) HaraMac:src hguser$ spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod net_perf
+```
