@@ -128,6 +128,7 @@ def exec_net_perf(module):
     # Define the target SQLite database and table
     sqlite_db_path = c.sqlite_db_path
     table_name = f"{module}_table"
+    outbound_csv = f"{c.outbound_folder_path}/{module}"
 
     # Read all files matching the pattern into a DataFrame
     file_path = f"{c.inbound_folder_path}{mod_name}_*.txt"
@@ -140,6 +141,8 @@ def exec_net_perf(module):
                               .withColumn("date", regexp_extract(input_file_name(), reg_exp, 2))
                               .withColumn("file_code", regexp_extract(input_file_name(), reg_exp, 3))
                               .withColumn("process_id", lit(process_id) ))
+
+    combined_df.write.csv(outbound_csv, header=True, mode="overwrite")
 
     # Save the DataFrame to the SQLite database
     (combined_df.write.format("jdbc")
