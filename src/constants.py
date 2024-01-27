@@ -1,4 +1,6 @@
 
+app_name = "NetworkMon"
+
 net_perf = 'net_perf'
 call_drop = 'call_drop'
 sub_seg = 'sub_seg'
