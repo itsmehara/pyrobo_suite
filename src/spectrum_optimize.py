@@ -1,5 +1,6 @@
 # spectrum_utilization_optimization.
 # (Similar structure as above with column names and transformations for spectrum_utilization_optimization module)
+import constants as c
 
 
 def spectrum_utilization_optimization():
@@ -8,6 +9,11 @@ def spectrum_utilization_optimization():
                "spectrum_cost", "spectrum_result"]
 
 
-def exec_spec_opt():
-	pass
+def exec_spec_opt(module):
+    pass
+
+
+if __name__ == "__main__":
+    # Execute the network performance module
+    exec_spec_opt(c.spec_opt)
 

@@ -1,5 +1,6 @@
 # churn_prediction.
 # (Similar structure as above with column names and transformations for churn_prediction module)
+import constants as c
 
 
 def churn_prediction():
@@ -8,6 +9,10 @@ def churn_prediction():
                "contract_duration", "monthly_bill", "churn_reason", "churn_result"]
 
 
-def exec_churn_pred():
-	pass
+def exec_churn_pred(module):
+    pass
 
+
+if __name__ == "__main__":
+    # Execute the network performance module
+    exec_churn_pred(c.churn_pred)

@@ -1,5 +1,6 @@
 # roaming_pattern_analysis.
 # (Similar structure as above with column names and transformations for roaming_pattern_analysis module)
+import constants as c
 
 
 def roaming_pattern_analysis():
@@ -8,6 +9,11 @@ def roaming_pattern_analysis():
                "roaming_type", "roaming_cost", "roaming_notes"]
 
 
-def exec_roam_pat():
-	pass
+def exec_roam_pat(module):
+    pass
+
+
+if __name__ == "__main__":
+    # Execute the network performance module
+    exec_roam_pat(c.roam_pat)
 
