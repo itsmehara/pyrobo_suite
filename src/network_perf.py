@@ -133,11 +133,11 @@ def exec_net_perf():
 
     reg_exp = r'(\w{2})_(\w{2})_(\w+)_network_performance_data_(\d{8})_(\d{4}).txt'
     # Extract additional information from the file path
-    combined_df = combined_df.withColumn("area_code", regexp_extract(input_file_name(), reg_exp, 1))
-    combined_df = combined_df.withColumn("zone_code", regexp_extract(input_file_name(), reg_exp, 2))
-    combined_df = combined_df.withColumn("module_name", regexp_extract(input_file_name(), reg_exp, 3))
-    combined_df = combined_df.withColumn("date", regexp_extract(input_file_name(), reg_exp, 4))
-    combined_df = combined_df.withColumn("file_code", regexp_extract(input_file_name(), reg_exp, 5))
+    combined_df = (combined_df.withColumn("area_code", regexp_extract(input_file_name(), reg_exp, 1))
+                              .withColumn("zone_code", regexp_extract(input_file_name(), reg_exp, 2))
+                              .withColumn("module_name", regexp_extract(input_file_name(), reg_exp, 3))
+                              .withColumn("date", regexp_extract(input_file_name(), reg_exp, 4))
+                              .withColumn("file_code", regexp_extract(input_file_name(), reg_exp, 5)) )
 
     # Extract the current process ID
     process_id = os.getpid()
