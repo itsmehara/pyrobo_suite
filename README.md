@@ -10,7 +10,15 @@ Learn to structure tests, handle dependencies, and generate insightful reports.
 
 ## Overview
 
-This PySpark project is designed for data migration, involving the processing of various pipe-delimited text data files. The data is fetched from a specific folder, processed with necessary transformations and cleanup, and pushed to different tables based on the file name. Each file corresponds to a specific table, and the processing is done in parallel using PySpark.
+    This PySpark project is designed for data migration, 
+    involving the processing of various pipe-delimited text data files. 
+
+    The data is fetched from a specific folder, 
+    processed with necessary transformations and cleanup, 
+    and pushed to different tables based on the file name. 
+
+    Each file corresponds to a specific table, 
+    and the processing is done in parallel using PySpark.
 
 ## Project Structure
 
@@ -18,7 +26,6 @@ The project structure consists of two main directories:
 
 ### Python Project contain:
 
- 
   * network_perf.py
   * call_drop.py
   * subscriber_seg.py
@@ -34,9 +41,13 @@ The project structure consists of two main directories:
   * qoe_analysis.py
   * spectrum_optimize.py
   * comp_benchmark.py
- 
-Each module will read pipe-delimited text file data from the source path using PySpark, perform basic transformations, and save the content to a SQLite database.
-File names for the 15 modules:
+
+
+    Each module will read pipe-delimited text file data from the source path using PySpark, 
+    perform basic transformations, and save the content to a SQLite database.
+
+### File names for the 15 modules:
+
 1. `pyrobo_suite/src/`: Contains PySpark modules for different data processing tasks.
    - `network_perf.py`
    - `call_drop.py`
@@ -190,78 +201,78 @@ Columns:
 
 #### Network Performance (net_perf)
 ```bash
-python main.py --mod net_perf
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod net_perf
 ```
 
 
 #### Call Drop Analysis (call_drop)
 ```bash
-python main.py --mod call_drop
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod call_drop
 ```
 
 #### Subscriber Segmentation (sub_seg)
 ```bash
-python main.py --mod sub_seg
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod sub_seg
 ```
 
 #### Predictive Maintenance (pred_maint)
 ```bash
-python main.py --mod pred_maint
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod pred_maint
 ```
 
 #### Fraud Detection (fraud_det)
 ```bash
-python main.py --mod fraud_det
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod fraud_det
 ```
 
 #### Billing Anomalies Detection (bill_anom)
 ```bash
-python main.py --mod bill_anom
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod bill_anom
 ```
 
 #### Network Optimization (net_opt)
 ```bash
-python main.py --mod net_opt
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod net_opt
 ```
 
 #### Coverage Analysis (cov_analy)
 ```bash
-python main.py --mod cov_analy
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod cov_analy
 ```
 
 #### Roaming Pattern Analysis (roam_pat)
 ```bash
-python main.py --mod roam_pat
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod roam_pat
 ```
 
 #### Customer Complaint Analysis (cust_comp)
 ```bash
-python main.py --mod cust_comp
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod cust_comp
 ```
 
 #### Churn Prediction (churn_pred)
 ```bash
-python main.py --mod churn_pred
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod churn_pred
 ```
 
 #### Network Security Analysis (net_sec)
 ```bash
-python main.py --mod net_sec
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod net_sec
 ```
 
 #### Quality of Experience Analysis (qoe_analy)
 ```bash
-python main.py --mod qoe_analy
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod qoe_analy
 ```
 
 #### Spectrum Utilization Optimization (spec_opt)
 ```bash
-python main.py --mod spec_opt
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod spec_opt
 ```
 
 #### Competitive Benchmarking (comp_bench)
 ```bash
-python main.py --mod comp_bench
+spark-submit --jars ../driver_sqlite/sqlite-jdbc-3.45.0.0.jar main.py --mod comp_bench
 ```
 
 code is working with following command
