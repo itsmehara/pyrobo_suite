@@ -18,3 +18,4 @@ comp_bench = 'comp_bench'
 # Define the path to the inbound folder
 inbound_folder_path = "../inbound/"
 outbound_folder_path = "../outbound/"
+sqlite_db_path = f"{outbound_folder_path}/pyrobo_suite_db.db"
