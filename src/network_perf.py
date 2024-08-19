@@ -4,6 +4,7 @@ from pyspark.sql.functions import split, col
 from pyspark.sql.functions import lit
 from pyspark.sql.functions import input_file_name, regexp_extract
 import constants as c
+import re
 mod_name = "network_performance_data"
 
 
