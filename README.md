@@ -83,6 +83,9 @@ The project structure consists of two main directories:
    - `test_qoe_analysis.robot`
    - `test_spectrum_optimize.robot`
    - `test_comp_benchmark.robot`
+   -  **This robot code is still being cooked. not finished yet.**
+   -  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/3b4607a1-1cc6-41f1-926f-892ae880e7a5" width="500">
+<br><br>
 
 3. `pyrobo_suite/inbound/`: Contains inbound pipe-delimited data files for each module.
    - `network_performance_cols`: ["timestamp", "call_id", ...]
